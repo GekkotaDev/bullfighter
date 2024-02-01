@@ -1,0 +1,46 @@
+{
+  "name": "app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "build:nuxt": "nuxt build",
+    "build:stories": "histoire build",
+    "cleanup": "nuxt cleanup",
+    "dev": "nuxt dev",
+    "dev:nuxt": "nuxt dev",
+    "dev:stories": "histoire dev",
+    "generate": "nuxt generate",
+    "generate:nuxt": "nuxt generate",
+    "generate:code": "plop",
+    "info": "nuxt info",
+    "preview": "nuxt preview",
+    "preview:nuxt": "nuxt preview",
+    "preview:stories": "histoire preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "nuxt cleanup && nuxt prepare",
+    "test": "nuxt test",
+    "typecheck": "nuxt typecheck",
+    "upgrade": "nuxt upgrade",
+    "n": "nuxt",
+    "g": "plop"
+  },
+  "devDependencies": {
+    "@iconify-json/line-md": "^1.1.33",
+    "@iconify-json/material-symbols": "^1.1.71",
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/svg-spinners": "^1.1.2",
+    "@tauri-apps/cli": "^1.5.9",
+    "@vueuse/core": "^10.7.2",
+    "jsdom": "^24.0.0",
+    "msw": "^2.1.5",
+    "nuxt": "^3.10.0",
+    "prettier": "^3.2.4",
+    "vitest": "^1.2.2",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.3"
+  }
+}

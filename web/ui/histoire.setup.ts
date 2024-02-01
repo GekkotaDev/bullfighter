@@ -1,0 +1,3 @@
+/*
+Initialize the environment of your stories.
+ */
