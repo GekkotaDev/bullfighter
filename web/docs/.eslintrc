@@ -1,0 +1,7 @@
+{
+  "extends": ["lints"],
+  "rules": {
+    "pii/dob": 0,
+    "tailwindcss/classnames-order": 0,
+  },
+}

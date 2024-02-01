@@ -1,0 +1,3 @@
+<template>
+  <noscript></noscript>
+</template>
