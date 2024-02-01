@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "strict": true,
+        "checkJs": true,
+        "noEmit": true
+    },
+    "files": [
+        "./flat.config.js"
+    ]
+}
