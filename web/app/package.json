@@ -30,7 +30,7 @@
     "@iconify-json/material-symbols": "^1.1.71",
     "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/svg-spinners": "^1.1.2",
-    "@tauri-apps/cli": "^1.5.9",
+    "@tauri-apps/cli": "2.0.0-beta.12",
     "@total-typescript/ts-reset": "^0.5.1",
     "@vueuse/core": "^10.7.2",
     "jsdom": "^24.0.0",
