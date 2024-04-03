@@ -124,6 +124,9 @@ importers:
       '@tauri-apps/cli':
         specifier: ^1.5.9
         version: 1.5.9
+      '@total-typescript/ts-reset':
+        specifier: ^0.5.1
+        version: 0.5.1
       '@vueuse/core':
         specifier: ^10.7.2
         version: 10.7.2(vue@3.4.15)
@@ -221,12 +224,6 @@ importers:
       '@fontsource/inter-tight':
         specifier: ^5.0.18
         version: 5.0.18
-      hotkeys-js:
-        specifier: ^3.13.5
-        version: 3.13.5
-      provueder:
-        specifier: ^0.0.0
-        version: 0.0.0(typescript@5.3.3)(vue@3.4.15)
     devDependencies:
       '@vite-pwa/nuxt':
         specifier: ^0.4.0
@@ -243,9 +240,6 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.1)
-      unplugin-macros:
-        specifier: ^0.9.2
-        version: 0.9.2(rollup@2.79.1)
       vitest:
         specifier: ^1.2.2
         version: 1.2.2(jsdom@24.0.0)
@@ -14571,28 +14565,6 @@ packages:
       unplugin: 1.6.0
       vite: 5.0.12
       webpack: 5.90.0
-    dev: true
-
-  /unplugin-macros@0.9.2(rollup@2.79.1):
-    resolution: {integrity: sha512-cWIpt6Rwovpwdu3DRV0Uqd5wpdLEz3pWJ36PMm6bS8WPQxawZ6NG2eEVo3agBvcj/6FATllWesO/nJ8DISgmrw==}
-    engines: {node: '>=16.14.0'}
-    dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@2.79.1)
-      ast-kit: 0.11.3(rollup@2.79.1)
-      magic-string-ast: 0.3.0
-      unplugin: 1.6.0
-      vite: 5.0.12
-      vite-node: 1.2.2
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - rollup
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
     dev: true
 
   /unplugin-vue-define-options@1.4.2(rollup@4.9.6)(vue@3.4.15):
