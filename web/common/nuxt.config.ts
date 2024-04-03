@@ -31,6 +31,20 @@ export default defineNuxtConfig({
         from: "ts-pattern",
         imports: ["match", "P"],
       },
+      {
+        from: "solivue",
+        imports: [
+          "createEffect",
+          "createRenderEffect",
+          "createMemo",
+          "onMount",
+          "onCleanup",
+          "createContext",
+          "createSignal",
+          "createStore",
+          "useContext",
+        ],
+      },
     ],
   },
 });
