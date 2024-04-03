@@ -5,7 +5,9 @@ export const {{pascalCase name}}Context = createContext();
 export const {{pascalCase name}}Provider = (props: Props) => {
   {{pascalCase name}}Context.of(/* State */);
 
-  return <></>;
+  return <>
+    <slot/>
+  </>;
 };
 
 export default {{pascalCase name}}Provider;
