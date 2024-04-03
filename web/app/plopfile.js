@@ -37,39 +37,26 @@ export default (
     ],
   });
 
-  plop.setGenerator("composable", {
-    description:
-      "Composable APIs for (stateful) logic; leverages Vue's Composition API.",
+  plop.setGenerator("provider", {
+    description: "Subtree dependency injection.",
     prompts: [
-      {
-        default: "/",
-        name: "subdirectory",
-        type: "input",
-        message:
-          "Which subdirectory should your composable be in? (optional, case sensitive)",
-      },
       {
         name: "name",
         type: "input",
-        message: "Name of your composable.",
+        message: "Role of your provider.",
       },
     ],
     actions: [
       {
         type: "add",
-        templateFile: "templates/composable/index.ts.hbs",
-        path: "composables/{{subdirectory}}/{{kebabCase name}}.ts",
-      },
-      {
-        type: "add",
-        templateFile: "templates/composable/component.spec.ts.hbs",
-        path: "composables/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.spec.ts",
+        templateFile: "templates/provider/provider.tsx.hbs",
+        path: "components/{{pascalCase name}}Provider.tsx",
       },
     ],
   });
 
   plop.setGenerator("layout", {
-    description: "UI shell.",
+    description: "UI layout.",
     prompts: [
       {
         default: "/",
@@ -88,43 +75,66 @@ export default (
       {
         type: "add",
         templateFile: "templates/layout/index.vue.hbs",
-        path: "layouts/{{subdirectory}}/{{pascalCase name}}/{{pascalCase name}}.vue",
+        path: "layouts/{{subdirectory}}/{{name}}/{{name}}.vue",
       },
       {
         type: "add",
         templateFile: "templates/layout/layout.story.vue.hbs",
-        path: "layouts/{{subdirectory}}/{{pascalCase name}}/{{pascalCase name}}.story.vue",
+        path: "layouts/{{subdirectory}}/{{name}}/{{name}}.story.vue",
       },
       {
         type: "add",
         templateFile: "templates/layout/layout.spec.ts.hbs",
-        path: "layouts/{{subdirectory}}/{{pascalCase name}}/{{pascalCase name}}.spec.ts",
+        path: "layouts/{{subdirectory}}/{{name}}/{{name}}.spec.ts",
       },
     ],
   });
 
-  /*
-  plop.setGenerator("page", {
-    description: "Nuxt Page.",
+  plop.setGenerator("route", {
+    description: "Application route.",
     prompts: [
       {
+        default: "/",
         name: "route",
         type: "input",
-        message: "Page route.",
       },
     ],
     actions: [
       {
         type: "add",
-        templateFile: "templates/page/page.spec.ts.hbs",
-        path: "layouts/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.spec.ts",
+        templateFile: "templates/route/.route/error.vue",
+        path: "routes/{{route}}/.route/error.vue",
       },
       {
         type: "add",
-        templateFile: "templates/page/page.vue.hbs",
-        path: "layouts/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.vue",
+        templateFile: "templates/route/.route/loading.vue",
+        path: "routes/{{route}}/.route/loading.vue",
+      },
+      {
+        type: "add",
+        templateFile: "templates/route/.route/view.vue",
+        path: "routes/{{route}}/.route/view.vue",
+      },
+      {
+        type: "add",
+        templateFile: "templates/route/+error.vue",
+        path: "routes/{{route}}/+error.vue",
+      },
+      {
+        type: "add",
+        templateFile: "templates/route/+loading.vue",
+        path: "routes/{{route}}/+loading.vue",
+      },
+      {
+        type: "add",
+        templateFile: "templates/route/+view.vue",
+        path: "routes/{{route}}/+view.vue",
+      },
+      {
+        type: "add",
+        templateFile: "templates/route/hooks.ts",
+        path: "routes/{{route}}/hooks.ts",
       },
     ],
   });
-  */
 };
